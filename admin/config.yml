@@ -26,8 +26,19 @@ collections:
     format: 'json'
     slug: '{{slug}}'
     fields:
-      - { label: 'Code', name: title', widget: 'string' }
+      - { label: 'Code', name: 'title', widget: 'string' }
       - { label: 'libellé', name: 'label', widget: 'string' }
+  - name: 'photo'
+    label: 'photographie'
+    folder: 'configuration/photo'
+    create: true
+    extension: 'json'
+    format: 'json'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Image', name: 'picture', widget: 'image' }
+      - { label: 'Catégorie', name: 'category', widget: 'relation', collection: categoriephoto, searchFields: ['label'], valueField: 'title' }
+
   - name: 'post' # Used in routes, e.g., /admin/collections/blog
     label: 'Post' # Used in the UI
     folder: 'post' # The path to the folder where the documents are stored  - **
