@@ -25,8 +25,9 @@ collections:
     extension: 'json'
     format: 'json'
     slug: '{{slug}}'
+    identifier_field: 'code'
     fields:
-      - { label: 'Code', name: 'title', widget: 'string' }
+      - { label: 'Code', name: 'code', widget: 'string' }
       - { label: 'libellé', name: 'label', widget: 'string' }
   - name: 'photo'
     label: 'photographie'
@@ -36,8 +37,8 @@ collections:
     format: 'json'
     slug: '{{slug}}'
     fields:
-      - { label: 'Image', name: 'picture', widget: 'image' }
-      - { label: 'Catégorie', name: 'category', widget: 'relation', collection: categoriephoto, searchFields: ['label'], valueField: 'title' }
+      - { label: 'image', name: 'image', widget: 'image' }
+      - { label: 'catégorie', name: 'category', widget: 'relation', collection: categoriephoto, searchFields: ['label'], valueField: 'code' }
 
   - name: 'post' # Used in routes, e.g., /admin/collections/blog
     label: 'Post' # Used in the UI
