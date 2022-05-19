@@ -20,7 +20,7 @@ logo_url: https://endearing-chebakia-e2b5f2.netlify.app/images/logo.png
 collections:
   - name: 'categoriephoto'
     label: 'catégories de photo'
-    folder: '/photocategory'
+    folder: 'configuration/photocategory'
     create: true
     extension: 'json'
     format: 'json'
