@@ -18,6 +18,16 @@ site_url: https://endearing-chebakia-e2b5f2.netlify.app/
 logo_url: https://endearing-chebakia-e2b5f2.netlify.app/images/logo.png
 
 collections:
+  - name: 'categoriephoto'
+    label: 'catégories de photo'
+    folder: '/photocategory'
+    create: true
+    extension: 'json'
+    format: 'json'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Code', name: title', widget: 'string' }
+      - { label: 'libellé', name: 'label', widget: 'string' }
   - name: 'post' # Used in routes, e.g., /admin/collections/blog
     label: 'Post' # Used in the UI
     folder: 'post' # The path to the folder where the documents are stored  - **
