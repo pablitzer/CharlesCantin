@@ -18,9 +18,9 @@ site_url: https://endearing-chebakia-e2b5f2.netlify.app/
 logo_url: https://endearing-chebakia-e2b5f2.netlify.app/images/logo.png
 
 collections:
-  - name: 'categoriephoto'
+  - name: 'categoriesphoto'
     label: 'catégories de photo'
-    folder: 'configuration/photocategory'
+    folder: 'configuration/photocategories'
     create: true
     extension: 'json'
     format: 'json'
@@ -37,8 +37,8 @@ collections:
         name: 'description'
         widget: 'string'
 
-  - name: 'photo'
-    label: 'photographie'
+  - name: 'photos'
+    label: 'photographies'
     folder: 'configuration/photo'
     create: true
     extension: 'json'
@@ -51,13 +51,13 @@ collections:
       - label: 'catégorie'
         name: 'category'
         widget: 'relation'
-        collection: categoriephoto
+        collection: categoriesphoto
         searchFields: ['label']
         valueField: 'code'
 
-  - name: 'page'
+  - name: 'pages'
     label: 'pages du site'
-    folder: 'configuration/page'
+    folder: 'configuration/pages'
     create: true
     delete: false
     extension: 'json'
@@ -98,8 +98,8 @@ collections:
           - label: 'image'
             name: 'image'
             widget: 'image'
-          - label: 'texte'
-            name: 'text'
+          - label: 'texte de survol'
+            name: 'hovertext'
             widget: 'string'
           - label: 'page de lien'
             name: 'linkedpage'
@@ -107,10 +107,19 @@ collections:
             collection: page
             searchFields: ['title']
             valueField: 'name'
-            default: 'index'
+            default: 'accueil'
+      - label: 'copyright'
+        name: 'copyright'
+        file: 'configuration/general/copyright.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'texte'
+            name: 'text'
+            widget: 'string'
       - label: 'menu de navigation'
         name: 'navigation'
-        file: 'configuration/general/navigation.json'
+        file: 'configuration/general/navbar.json'
         extension: 'json'
         format: 'json'
         fields:
@@ -128,8 +137,8 @@ collections:
               - label: 'libellé'
                 name: 'label'
                 widget: 'string'
-              - label: 'description'
-                name: 'description'
+              - label: 'texte de survol'
+                name: 'hovertext'
                 widget: 'string'
               - label: 'page de lien'
                 name: 'linkedpage'
@@ -137,3 +146,82 @@ collections:
                 collection: page
                 searchFields: ['title']
                 valueField: 'name'
+      - label: 'menu de pied de page'
+        name: 'footermenu'
+        file: 'configuration/general/footermenu.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'choix du menu'
+            name: 'menuitems'
+            widget: 'list'
+            summary: '{{fields.label}}'
+            allow_add: true
+            collapsed: true
+            fields:
+              - label: 'ordre affichage'
+                name: 'order'
+                widget: 'number'
+                value_type: 'int'
+              - label: 'libellé'
+                name: 'label'
+                widget: 'string'
+              - label: 'texte de survol'
+                name: 'hovertext'
+                widget: 'string'
+              - label: 'page de lien'
+                name: 'linkedpage'
+                widget: 'relation'
+                collection: page
+                searchFields: ['title']
+                valueField: 'name'
+      - label: 'liens de réseaux sociaux'
+        name: 'sociallinks'
+        file: 'configuration/general/sociallinks.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'réseaux sociaux'
+            name: 'socialnetworks'
+            widget: 'list'
+            summary: '{{fields.label}}'
+            allow_add: true
+            collapsed: true
+            fields:
+              - label: 'ordre affichage'
+                name: 'order'
+                widget: 'number'
+                value_type: 'int'
+              - label: 'libellé'
+                name: 'label'
+                widget: 'string'
+              - label: 'texte de survol'
+                name: 'hovertext'
+                widget: 'string'
+              - label: 'url du lien social'
+                name: 'url'
+                widget: 'string'
+              - label: 'logo du réseau réseau social (fichier svg)'
+                name: logo
+                widget: 'image'
+      - label: 'informations de contact'
+        name: 'contactinfos'
+        file: 'configuration/general/contactinfos.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'nom de contact'
+            name: 'contactname'
+            widget: 'string'
+          - label: 'Adresse ligne 1'
+            name: 'address1'
+            widget: 'string'
+          - label: 'Adresse ligne 2'
+            name: 'address2'
+            widget: 'string'
+          - label: 'numéro de téléphone'
+            name: 'phonenumber'
+            widget: 'string'
+          - label: 'e-mail'
+            name: 'email'
+            widget: 'string'
