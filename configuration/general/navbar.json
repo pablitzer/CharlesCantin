@@ -1,1 +1,10 @@
-{}
+{
+  "menuitems": [
+    {
+      "order": 1,
+      "label": "Accueil",
+      "hovertext": "Page d'accueil",
+      "linkedpage": "accueil"
+    }
+  ]
+}
