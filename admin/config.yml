@@ -393,3 +393,4 @@ collections:
         name: 'order'
         widget: 'number'
         value_type: 'int'
+        required: true
