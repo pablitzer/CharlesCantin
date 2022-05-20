@@ -1,1 +1,12 @@
-{}
+{
+  "picturelist": [
+    {
+      "image": "/images/uploads/grossesse_5.jpg",
+      "category": "grossesse"
+    },
+    {
+      "category": "mariage",
+      "image": "/images/uploads/mariage_1.jpg"
+    }
+  ]
+}
