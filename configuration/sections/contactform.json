@@ -1,1 +1,44 @@
-{}
+{
+  "text": "Aut magni eaque eos animi ratione eos rerum dolores qui voluptas omnis ut reiciendis facilis ab incidunt nemo. Ut aperiam molestiae ut quia cupiditate et blanditiis ipsum ut ullam ipsum aut nisi voluptatem eum similique dolorum.",
+  "actiontext": "ENVOYER",
+  "actionhovertext": "Envoyer votre message",
+  "successtext": "Votre message est pris en compte, nous vous répondrons dans les plus brefs délais",
+  "errortext": "Votre message n'a pas pu être envoyé, veuillez réessayer ou nous contacter par téléphone au +33 01 02 03 04 05",
+  "fieldconfiguration": [
+    {
+      "isrequired": true,
+      "fieldname": "NOM",
+      "label": "Votre nom",
+      "type": "texte mono-ligne",
+      "order": 1
+    },
+    {
+      "isrequired": true,
+      "fieldname": "EMAIL",
+      "label": "Votre Email",
+      "type": "email",
+      "order": 2
+    },
+    {
+      "isrequired": false,
+      "fieldname": "SUJET",
+      "label": "Sujet",
+      "type": "texte mono-ligne",
+      "order": 3
+    },
+    {
+      "isrequired": true,
+      "fieldname": "MESSAGE",
+      "label": "Votre message",
+      "type": "texte multi-lignes",
+      "order": 4
+    },
+    {
+      "isrequired": true,
+      "fieldname": "ACCORDRGPD",
+      "label": "J'accepte que les informations saisies soient exploitées dans le cadre de cette demande",
+      "type": "case à cocher",
+      "order": 5
+    }
+  ]
+}
