@@ -1,0 +1,11 @@
+{
+  "socialnetworks": [
+    {
+      "order": 1,
+      "label": "facebook",
+      "hovertext": "Retrouvez-moi sur Facebook",
+      "url": "https://fr-fr.facebook.com/photographe.charles.cantin",
+      "logo": "/images/uploads/facebook.svg"
+    }
+  ]
+}
