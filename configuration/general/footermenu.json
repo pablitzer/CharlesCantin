@@ -1,1 +1,10 @@
-{}
+{
+  "menuitems": [
+    {
+      "order": 1,
+      "label": "Prestations & Tarifs",
+      "hovertext": "Consultez me offres de prestation",
+      "linkedpage": "accueil"
+    }
+  ]
+}
