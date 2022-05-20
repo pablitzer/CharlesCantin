@@ -42,27 +42,26 @@ collections:
         default: true
 
   - name: 'photos'
-    label: 'configuration de la galerie de photographies'
-    files:
-      - label: 'photographies'
-        name: 'pictures'
-        file: 'configuration/galerie/photos.json'
-        extension: 'json'
-        format: 'json'
-        fields:
-          - label: 'liste des photographies'
-            name: 'picturelist'
-            widget: 'list'
-            fields:
-              - label: 'image'
-                name: 'image'
-                widget: 'image'
-              - label: 'catégorie'
-                name: 'category'
-                widget: 'relation'
-                collection: categoriesphoto
-                searchFields: ['label']
-                valueField: 'code'
+    label: 'photographies'
+    folder: 'configuration/photo'
+    create: true
+    extension: 'json'
+    format: 'json'
+    slug: '{{slug}}'
+    identifier_field: 'name'
+    fields:
+      - label: 'nom (unique)'
+        name: 'name'
+        widget: 'string'
+      - label: 'image'
+        name: 'image'
+        widget: 'image'
+      - label: 'catégorie'
+        name: 'category'
+        widget: 'relation'
+        collection: categoriesphoto
+        searchFields: ['label']
+        valueField: 'code'
 
   - name: 'pages'
     label: 'pages du site'
