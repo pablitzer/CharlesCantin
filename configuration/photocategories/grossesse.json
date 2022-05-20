@@ -1,4 +1,6 @@
 {
   "code": "grossesse",
-  "label": "grossesse"
+  "label": "grossesse",
+  "isvisible": true,
+  "description": "photographies de grossesse"
 }
