@@ -36,6 +36,10 @@ collections:
       - label: 'description'
         name: 'description'
         widget: 'string'
+      - label: 'catégories affichée dans la galerie'
+        name: 'isvisible'
+        widget: 'boolen'
+        default: true
 
   - name: 'photos'
     label: 'photographies'
@@ -85,6 +89,112 @@ collections:
       - label: 'image de fond'
         name: 'backgroundimage'
         widget: 'image'
+
+  - name: 'sections'
+    label: 'configuration des sections de page'
+    files:
+      - label: 'section à propos'
+        name: 'aboutsection'
+        file: 'configuration/sections/about.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'titre de section'
+            name: 'title'
+            widget: 'string'
+          - label: 'image'
+            name: 'image'
+            widget: 'image'
+          - label: 'légende image'
+            name: 'imagecaption'
+            widget: 'string'
+          - label: 'texte'
+            name: 'text'
+            widget: 'markdown'
+          - label: "texte du bouton d'action"
+            name: 'actiontext'
+            widget: 'string'
+          - label: "texte de survol du bouton d'action"
+            name: 'actionhovertext'
+            widget: 'string'
+          - label: "page de lien du bouton d'action"
+            name: 'actionlinkedpage'
+            widget: 'relation'
+            collection: 'pages'
+            searchFields: ['title']
+            valueField: 'name'
+      - label: 'section galerie de photo'
+        name: 'gallerysection'
+        file: 'configuration/sections/gallery.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: "texte de détail d'image"
+            name: 'detaildisplaytext'
+            widget: 'string'
+          - label: 'catégorie sélectionnée (Toutes par défaut)'
+            name: 'category'
+            widget: 'relation'
+            collection: categoriesphoto
+            searchFields: ['label']
+            valueField: 'code'
+            required: false
+          - label: 'texte de survol des miniatures'
+            name: 'thumbnailhovertext'
+            widget: 'string'
+          - label: 'texte de survol du bouton image suivante'
+            name: 'nexthovertext'
+            widget: 'string'
+          - label: 'texte de survol du bouton image précédente'
+            name: 'prevhovertext'
+            widget: 'string'
+          - label: 'texte de survol du bouton fermeture détail'
+            name: 'closehovertext'
+            widget: 'string'
+      - label: 'section formulaire de contact'
+        name: 'contactformsection'
+        file: 'configuration/sections/contactform.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'texte en entête du formulaire'
+            name: 'text'
+            widget: 'markdown'
+          - label: 'texte du bouton envoyer'
+            name: 'actiontext'
+            widget: 'string'
+          - label: 'texte de survol du bouton envoyer'
+            name: 'actionhovertext'
+            widget: 'string'
+          - label: "message de confirmation d'envoi"
+            name: 'successtext'
+            widget: 'string'
+          - label: "message d'échec d'envoi"
+            name: 'errortext'
+            widget: 'string'
+          - label: 'configuration des champs'
+            name: 'fieldconfiguration'
+            widget: 'list'
+            fields:
+              - label: 'nom du champ'
+                name: 'fieldname'
+                widget: 'string'
+                pattern: ['[A-Za-z0-9]', 'le nom du champ ne peut contenir que des lettres et des chiffres sans espace']
+              - label: 'libellé du champ'
+                name: 'label'
+                widget: 'string'
+              - label: 'champ obligatoire'
+                name: 'isrequired'
+                widget: 'boolean'
+                default: true
+              - label: 'type du champ'
+                name: 'type'
+                widget: 'select'
+                options: ['texte multi-lignes', 'texte mono-ligne', 'email', 'telephone', 'case à cocher']
+              - label: 'ordre affichage'
+                name: 'order'
+                widget: 'number'
+                value_type: 'int'
 
   - name: 'generalconfiguration'
     label: 'configuration générale'
@@ -219,9 +329,60 @@ collections:
           - label: 'Adresse ligne 2'
             name: 'address2'
             widget: 'string'
-          - label: 'numéro de téléphone'
+          - label: 'numéro de téléphone fixe'
             name: 'phonenumber'
             widget: 'string'
+            required: false
+          - label: 'numéro de téléphone mobile'
+            name: 'mobilephonenumber'
+            widget: 'string'
+            required: false
           - label: 'e-mail'
             name: 'email'
             widget: 'string'
+
+  - name: 'prestations'
+    label: 'prestations'
+    folder: 'configuration/prestations'
+    create: true
+    delete: true
+    extension: 'json'
+    format: 'json'
+    slug: '{{slug}}'
+    identifier_field: 'name'
+    fields:
+      - label: 'nom'
+        name: 'name'
+        widget: 'string'
+      - label: 'libellé'
+        name: 'label'
+        widget: 'string'
+      - label: 'description'
+        name: 'description'
+        widget: 'string'
+      - label: 'note complémentaire sur tarif'
+        name: 'pricenote'
+        widget: 'string'
+      - label: 'tarif sur mesure'
+        name: 'tailormadeprice'
+        widget: 'boolean'
+      - label: 'tarif'
+        name: 'price'
+        widget: 'number'
+        value_type: 'float'
+        min: 1
+      - label: "image d'illustration"
+        name: 'image'
+        widget: 'image'
+      - label: "texte du bouton d'action"
+        name: 'actiontext'
+        widget: 'string'
+      - label: "texte de survol du bouton d'action"
+        name: 'actionhovertext'
+        widget: 'string'
+      - label: "page de lien du bouton d'action"
+        name: 'actionlinkedpage'
+        widget: 'relation'
+        collection: 'pages'
+        searchFields: ['title']
+        valueField: 'name'
