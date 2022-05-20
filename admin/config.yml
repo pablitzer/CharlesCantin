@@ -15,7 +15,7 @@ public_folder: '/images/uploads' # The src attribute for uploaded media will beg
 
 site_url: https://endearing-chebakia-e2b5f2.netlify.app/
 
-logo_url: https://endearing-chebakia-e2b5f2.netlify.app/images/logo.png
+logo_url: /images/uploads/logo_admin.png
 
 collections:
   - name: 'categoriesphoto'
