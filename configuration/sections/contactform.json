@@ -37,7 +37,7 @@
       "isrequired": true,
       "fieldname": "ACCORDRGPD",
       "label": "J'accepte que les informations saisies soient exploitées dans le cadre de cette demande",
-      "type": "case à cocher",
+      "type": "case a cocher",
       "order": 5
     }
   ]

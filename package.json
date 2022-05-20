@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pablitzer/CharlesCantin#readme",
   "dependencies": {
+    "markdown-it": "^13.0.1",
     "netlify-cms-app": "^2.15.72"
   }
 }

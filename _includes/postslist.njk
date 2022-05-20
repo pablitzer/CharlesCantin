@@ -1,13 +1,4 @@
-<ul>
-    {% for post in postslist %}
-        <li>
-            <strong>
-                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-            </strong>
-            -
-            <span>
-                {{ post.data.description }}
-            </span>
-        </li>
-    {% endfor %}
-</ul>
+<div>
+    <h2>{{aboutsection.title}}<h2>
+    {{aboutsection.text | md | safe}}
+</div>

@@ -190,7 +190,7 @@ collections:
               - label: 'type du champ'
                 name: 'type'
                 widget: 'select'
-                options: ['texte multi-lignes', 'texte mono-ligne', 'email', 'telephone', 'case à cocher']
+                options: ['texte multi-lignes', 'texte mono-ligne', 'email', 'telephone', 'case a cocher']
               - label: 'ordre affichage'
                 name: 'order'
                 widget: 'number'
@@ -386,3 +386,7 @@ collections:
         collection: 'pages'
         searchFields: ['title']
         valueField: 'name'
+      - label: "ordre d'affichage"
+        name: 'order'
+        widget: 'number'
+        value_type: 'int'
