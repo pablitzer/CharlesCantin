@@ -363,14 +363,17 @@ collections:
       - label: 'note complémentaire sur tarif'
         name: 'pricenote'
         widget: 'string'
+        required: false
       - label: 'tarif sur mesure'
         name: 'tailormadeprice'
         widget: 'boolean'
+        required: false
       - label: 'tarif'
         name: 'price'
         widget: 'number'
         value_type: 'float'
         min: 1
+        required: false
       - label: "image d'illustration"
         name: 'image'
         widget: 'image'

@@ -1,12 +1,10 @@
 {
-  "tailormadeprice": true,
   "actiontext": "CONTACTEZ-MOI",
   "price": 130,
   "name": "justemoi",
-  "actionhovertext": "Contactez moi en utilisant le formulaire",
+  "actionhovertext": "Contactez-moi en utilisant le formulaire",
   "label": "juste moi",
-  "pricenote": "hello",
-  "image": "/images/uploads/portrait_5.jpg",
+  "image": "/images/uploads/illustration-justemoi.jpg",
   "description": "Séance pour une personne, en extérieur ou en studio",
   "actionlinkedpage": "accueil"
 }
