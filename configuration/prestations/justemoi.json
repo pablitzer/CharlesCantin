@@ -2,6 +2,7 @@
   "actiontext": "CONTACTEZ-MOI",
   "price": 130,
   "name": "justemoi",
+  "order": 1,
   "actionhovertext": "Contactez-moi en utilisant le formulaire",
   "label": "juste moi",
   "image": "/images/uploads/illustration-justemoi.jpg",
