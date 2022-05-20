@@ -48,6 +48,7 @@ collections:
     extension: 'json'
     format: 'json'
     slug: '{{slug}}'
+    identifier_field: 'image'
     fields:
       - label: 'image'
         name: 'image'
