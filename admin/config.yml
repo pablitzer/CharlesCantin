@@ -36,9 +36,9 @@ collections:
       - label: 'description'
         name: 'description'
         widget: 'string'
-      - label: 'catégories affichée dans la galerie'
+      - label: 'catégorie affichée dans la galerie?'
         name: 'isvisible'
-        widget: 'boolen'
+        widget: 'boolean'
         default: true
 
   - name: 'photos'
