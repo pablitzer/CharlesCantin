@@ -42,23 +42,27 @@ collections:
         default: true
 
   - name: 'photos'
-    label: 'photographies'
-    folder: 'configuration/photo'
-    create: true
-    extension: 'json'
-    format: 'json'
-    slug: '{{slug}}'
-    identifier_field: 'image'
-    fields:
-      - label: 'image'
-        name: 'image'
-        widget: 'image'
-      - label: 'catégorie'
-        name: 'category'
-        widget: 'relation'
-        collection: categoriesphoto
-        searchFields: ['label']
-        valueField: 'code'
+    label: 'configuration de la galerie de photographies'
+    files:
+      - label: 'photographies'
+        name: 'pictures'
+        file: 'configuration/galerie/photos.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'liste des photographies'
+            name: 'picturelist'
+            widget: 'list'
+            fields:
+              - label: 'image'
+                name: 'image'
+                widget: 'image'
+              - label: 'catégorie'
+                name: 'category'
+                widget: 'relation'
+                collection: categoriesphoto
+                searchFields: ['label']
+                valueField: 'code'
 
   - name: 'pages'
     label: 'pages du site'
@@ -352,6 +356,11 @@ collections:
     slug: '{{slug}}'
     identifier_field: 'name'
     fields:
+      - label: "ordre d'affichage"
+        name: 'order'
+        widget: 'number'
+        value_type: 'int'
+        required: true
       - label: 'nom'
         name: 'name'
         widget: 'string'
@@ -390,8 +399,3 @@ collections:
         collection: 'pages'
         searchFields: ['title']
         valueField: 'name'
-      - label: "ordre d'affichage"
-        name: 'order'
-        widget: 'number'
-        value_type: 'int'
-        required: true
