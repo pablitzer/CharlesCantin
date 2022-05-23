@@ -1,4 +1,7 @@
 {
   "code": "mariage",
-  "label": "mariage"
+  "order": 3,
+  "label": "mariage",
+  "isvisible": true,
+  "description": "photographies de mariage"
 }

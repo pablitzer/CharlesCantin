@@ -14,6 +14,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./images');
   eleventyConfig.addPassthroughCopy('./javascript');
   eleventyConfig.addPassthroughCopy('./configuration');
+
+  // add global photo list data as a collection
+  eleventyConfig.addCollection('photos', function (collectionApi) {
+    console.log(collectionApi.items[0].data);
+
+    return Object.entries(collectionApi.items[0].data['photos']).map((e) => e[1]);
+  });
+
+  // add category photo list data as a collection
+  eleventyConfig.addCollection('photocategories', function (collectionApi) {
+    console.log(collectionApi.items[0].data);
+
+    return Object.entries(collectionApi.items[0].data['photocategories']).map((e) => e[1]);
+  });
+
   // Return your Object options:
   return {
     dir: {

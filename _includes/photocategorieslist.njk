@@ -1,0 +1,5 @@
+<ul>
+{%- for category in collections.photocategories | sort( false, true, 'order') | selectattr("isvisible") -%}
+    <li>{{category.label}}</li>
+{%- endfor -%}
+</ul>

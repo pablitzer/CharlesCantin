@@ -30,6 +30,10 @@ collections:
       - label: 'Code'
         name: 'code'
         widget: 'string'
+      - label: 'ordre affichage'
+        name: 'order'
+        widget: 'number'
+        value_type: 'int'
       - label: 'libellé'
         name: 'label'
         widget: 'string'
@@ -43,7 +47,7 @@ collections:
 
   - name: 'photos'
     label: 'photographies'
-    folder: 'configuration/photo'
+    folder: 'configuration/photos'
     create: true
     extension: 'json'
     format: 'json'
