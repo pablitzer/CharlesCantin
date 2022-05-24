@@ -1,7 +1,6 @@
 <nav>
     <ul>
         {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
-            {{menuitem | log }}
             {% if currentpage ==  menuitem.linkedpage %}
                 {% set currentclass = "current" %}
             {% else %}

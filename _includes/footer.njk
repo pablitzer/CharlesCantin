@@ -1,0 +1,25 @@
+{% set infos = general.contactinfos %}
+<footer>
+    <div>
+        <h2>{{infos.contactname}}</h2>
+        <div>{{infos.address1}}<div>
+        {% if infos.address2 %}<div>{{infos.address2}}<div>{% endif%}
+        {% if infos.phonenumber %}<div>{{infos.phonenumber}}<div>{% endif%}
+        {% if infos.mobilephonenumber %}<div>{{infos.mobilephonenumber}}<div>{% endif%}
+        <div>{{infos.email}}<div>
+    </div>
+    <div>
+    </div>
+
+    <div>
+        <h2>{{general.otherlabels.moreinfotitle}}</h2>
+        <ul>
+        {% for menuitem in general.footermenu.menuitems | sort( false, true, 'order') %}
+            <li>
+                <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}">{{menuitem.label}}</a>
+            </li>
+        {% endfor %}
+        </ul>
+        {% include "sociallinks.njk" %}
+    </div>
+<footer>

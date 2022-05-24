@@ -1,12 +1,22 @@
-<html>
+<html lang="fr">
     <head>
-        <title>Eleventy + Netlify CMS Blog Example</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{pagedata.refdescription}}">
+      <title>{{pagedata.reftitle}}</title>
     </head>
     <body>
-        <h1>
-            Eleventy + Netlify CMS Blog Example
-        </h1>
-        {{ content | safe }}
+      {% block header %}
+        {% include "header.njk" %}
+      {% endblock %}
+      {% block main %}
+      {% endblock %}
+      {% block footer %}
+        {% include "footer.njk" %}
+      {% endblock %}
+      {% block script %}
+      {% endblock %}
       <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -19,4 +29,16 @@
       }
       </script>
     </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
 </html>

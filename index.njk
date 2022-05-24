@@ -1,5 +1,12 @@
 ---
-layout: layouts/base.njk
 permalink: /
 ---
-Hello! Welcome to the Eleventy + Netlify from scratch homepage.
+{% set currentpage = 'accueil' %}
+{% set pagedata = pages[currentpage] %}
+{% extends "layouts/base.njk" %}
+
+{% block main %}
+     
+{% endblock %}
+      
+
