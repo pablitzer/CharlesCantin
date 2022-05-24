@@ -5,6 +5,24 @@
       "label": "Accueil",
       "hovertext": "Page d'accueil",
       "linkedpage": "accueil"
+    },
+    {
+      "order": 2,
+      "label": "Galeries",
+      "hovertext": "Regardez mes galeries de photographies",
+      "linkedpage": "galeries"
+    },
+    {
+      "order": 3,
+      "label": "Prestations",
+      "hovertext": "Consultez mes tarifs prestations",
+      "linkedpage": "prestations"
+    },
+    {
+      "order": 4,
+      "label": "Contact",
+      "hovertext": "Envoyez moi un message",
+      "linkedpage": "contact"
     }
   ]
 }

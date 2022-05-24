@@ -1,0 +1,7 @@
+<div>
+    {% for photo in collections.photos %}
+        {% if currentcategory == 'all' or currentcategory == photo.category%}
+    <img src="/images/thumbnails/{{photo.filename}}" alt="{{photo.name}}">
+        {% endif %}
+    {% endfor %}
+</div>

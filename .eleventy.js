@@ -1,3 +1,5 @@
+const { object } = require('sharp/lib/is');
+
 module.exports = function (eleventyConfig) {
   let markdownIt = require('markdown-it');
   let options = {
@@ -15,11 +17,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./javascript');
   eleventyConfig.addPassthroughCopy('./configuration');
 
+  eleventyConfig.ignores.add('README.md');
+
+  // add prestations data as a collection
+  eleventyConfig.addCollection('prestations', function (collectionApi) {
+    console.log(collectionApi.items[0].data);
+
+    return Object.entries(collectionApi.items[0].data['prestations']).map((e) => e[1]);
+  });
+
   // add global photo list data as a collection
   eleventyConfig.addCollection('photos', function (collectionApi) {
     console.log(collectionApi.items[0].data);
 
-    return Object.entries(collectionApi.items[0].data['photos']).map((e) => e[1]);
+    return Object.entries(collectionApi.items[0].data['photos']).map((e) => Object.assign({ filename: e[1].image.replace(/^.*[\\\/]/, '') }, e[1]));
   });
 
   // add category photo list data as a collection

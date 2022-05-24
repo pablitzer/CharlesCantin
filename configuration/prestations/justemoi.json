@@ -1,5 +1,6 @@
 {
   "actiontext": "CONTACTEZ-MOI",
+  "tailormadeprice": false,
   "price": 130,
   "name": "justemoi",
   "order": 1,
@@ -7,5 +8,7 @@
   "label": "juste moi",
   "image": "/images/uploads/illustration-justemoi.jpg",
   "description": "Séance pour une personne, en extérieur ou en studio",
-  "actionlinkedpage": "accueil"
+  "pricenote": "",
+  "actionlinkedpage": "contact",
+  "isvisible": true
 }

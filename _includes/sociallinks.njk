@@ -1,0 +1,5 @@
+<ul>
+{% for link in general.sociallinks.socialnetworks | sort( false, true, 'order') %}
+    <li><a href="{{link.url}}" title="{{link.hovertext}}"><img src="{{link.logo}}" alt="{{link.label}}"></a></li>
+{% endfor %}
+</ul>

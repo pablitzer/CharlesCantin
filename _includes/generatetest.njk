@@ -1,2 +1,17 @@
+<h2> Header </h2>
+{% include "header.njk" %}
+
+
 <h2>Photo categories photoList</h2>
+{% set addAllCategory = true %}
 {% include "photocategorieslist.njk" %}
+
+{% set currentcategory = 'bapteme' %}
+
+<h2>Galerie</h2>
+{% include "gallery.njk" %}
+
+
+<h2>Prestations</h2>
+{% include "prestations.njk" %}
+

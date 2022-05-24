@@ -1,0 +1,15 @@
+<nav>
+    <ul>
+        {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
+            {{menuitem | log }}
+            {% if currentpage ==  menuitem.linkedpage %}
+                {% set currentclass = "current" %}
+            {% else %}
+                {% set currentclass = "" %}
+            {% endif %}
+        <li class="{{currentclass}}">
+            <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}">{{menuitem.label}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

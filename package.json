@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "node _javascript/thumbnails.js;MY_ENVIRONMENT=production npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/pablitzer/CharlesCantin#readme",
   "dependencies": {
     "markdown-it": "^13.0.1",
-    "netlify-cms-app": "^2.15.72"
+    "netlify-cms-app": "^2.15.72",
+    "sharp": "^0.30.5"
   }
 }

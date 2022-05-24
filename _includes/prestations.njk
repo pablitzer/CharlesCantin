@@ -1,0 +1,3 @@
+{% for prestation in collections.prestations | sort( false, true, 'order') | selectattr("isvisible")%}
+    {% include "prestation.njk" %} 
+{% endfor %}

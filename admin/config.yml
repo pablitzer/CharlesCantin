@@ -97,6 +97,9 @@ collections:
       - label: 'image de fond'
         name: 'backgroundimage'
         widget: 'image'
+      - label: 'url'
+        name: 'url'
+        widget: 'hidden'
 
   - name: 'sections'
     label: 'configuration des sections de page'
@@ -348,6 +351,18 @@ collections:
           - label: 'e-mail'
             name: 'email'
             widget: 'string'
+      - label: 'autres libellés divers'
+        name: 'otherlabels'
+        file: 'configuration/general/otherlabels.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'Toutes catégories'
+            name: 'allcategories'
+            widget: 'string'
+          - label: 'Prix sur mesure'
+            name: 'tailormadeprice'
+            widget: 'string'
 
   - name: 'prestations'
     label: 'prestations'
@@ -402,3 +417,7 @@ collections:
         collection: 'pages'
         searchFields: ['title']
         valueField: 'name'
+      - label: 'prestation affichée sur le site?'
+        name: 'isvisible'
+        widget: 'boolean'
+        default: true
