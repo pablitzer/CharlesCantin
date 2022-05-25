@@ -8,13 +8,14 @@ module.exports = function (eleventyConfig) {
     linkify: true,
   };
 
-  eleventyConfig.addNunjucksFilter('md', require('./filters/markdown_filter'));
+  eleventyConfig.addNunjucksFilter('md', require('./_filters/markdown_filter'));
 
   eleventyConfig.setLibrary('md', markdownIt(options));
 
   eleventyConfig.addPassthroughCopy('./admin');
   eleventyConfig.addPassthroughCopy('./images');
-  eleventyConfig.addPassthroughCopy('./javascript');
+  eleventyConfig.addPassthroughCopy('./javascripts');
+  eleventyConfig.addPassthroughCopy('./stylesheets');
   eleventyConfig.addPassthroughCopy('./configuration');
 
   eleventyConfig.ignores.add('README.md');

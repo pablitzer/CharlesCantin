@@ -1,0 +1,96 @@
+@import 'font';
+@import 'customBS';
+
+.wrapper {
+  min-width: 300px;
+  min-height: 360px;
+  height: 100vh;
+  width: 100vw;
+  @media (min-width: 600px) and (min-height: 400px) {
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 600px;
+    margin: auto;
+  }
+}
+
+.current {
+  background-color: $light;
+}
+
+.game-row-1 {
+  height: 50px;
+  @media (min-height: 600px) {
+    height: 80px;
+  }
+}
+.game-row-2 {
+  height: 40px;
+  @media (min-height: 600px) {
+    height: 80px;
+  }
+}
+.game-row-3 {
+  height: calc(55% - 90px);
+  @media (min-height: 600px) {
+    height: calc(50% - 110px);
+  }
+}
+.game-row-4 {
+  height: 40px;
+  @media (min-height: 600px) {
+    height: 80px;
+  }
+}
+.game-row-5 {
+  height: calc(45% - 40px);
+  @media (min-height: 600px) {
+    height: calc(50% - 160px);
+    margin-bottom: 30px;
+  }
+}
+
+.player-global-score {
+  font-size: 80px;
+}
+.current-score-box {
+  width: 110px;
+  height: 80px;
+}
+
+#player1.current h2::after,
+#player2.current h2::after {
+  content: '\f287';
+  display: inline-block;
+  font-family: bootstrap-icons;
+  font-size: 16px;
+  padding-left: 10px;
+  align-self: center;
+  color: $primary;
+}
+#player1:not(.current) h2,
+#player2:not(.current) h2 {
+  color: $gray-500;
+  font-weight: lighter;
+}
+
+button.action {
+  border: none;
+  background-color: transparent;
+  color: $primary;
+  font-weight: 300;
+  span {
+    color: $dark;
+  }
+  &:disabled {
+    span {
+      color: $gray-400;
+    }
+  }
+}
+@media (hover: hover) {
+  button.action:hover:not(:disabled) {
+    transform: scale(1.1, 1.1);
+  }
+}

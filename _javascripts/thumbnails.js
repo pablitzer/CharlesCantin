@@ -43,6 +43,7 @@ async function createThumbnails() {
     const filePath = `images/uploads/${fileName}`;
     const thumbnailFilePath = `_site/images/thumbnails/${fileName}`;
     if (isImage(fileName)) {
+      console.log(`[thumbnails] process ${fileName}`);
       generateThumbnail(filePath, thumbnailFilePath);
     }
   });
