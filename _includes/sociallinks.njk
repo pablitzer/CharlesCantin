@@ -1,5 +1,7 @@
-<ul>
+<div class="d-flex me-auto mb-2 mb-lg-0 col-hd-2 col-4 col-lg-2 ">
 {% for link in general.sociallinks.socialnetworks | sort( false, true, 'order') %}
-    <li><a href="{{link.url}}" title="{{link.hovertext}}"><img src="{{link.logo}}" alt="{{link.label}}"></a></li>
+    <div class="nav-item">
+        <a href="{{link.url}}" title="{{link.hovertext}}" class="nav-link"><img src="{{link.logo}}" alt="{{link.label}}" class="social-icon"></a>
+    </div>
 {% endfor %}
-</ul>
+</div>

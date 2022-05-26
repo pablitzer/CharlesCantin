@@ -1,25 +1,37 @@
-$primary: #e85c54;
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
 
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px,
-  10: 10px,
+$col-dark: #2b2d2f;
+$col-dark-lighter: #5f6973;
+$col-dark-lightest: #939699;
+$col-light: #ffffff;
+$col-brand-darker: #172533;
+$col-brand: #2e465d;
+$col-brand-lighter: #436789;
+
+$primary: $col-brand;
+$secondary: $col-brand-darker;
+$light: $col-light;
+$dark: $col-dark;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  hd: 1600px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  hd: 1600px,
 );
 
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  custom: 80px,
-);
-
-$font-family-sans-serif: Lato, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif: Oxygen, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 @import '../node_modules/bootstrap/scss/bootstrap';

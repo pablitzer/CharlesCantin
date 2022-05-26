@@ -1,14 +1,19 @@
-<nav>
-    <ul>
+<div class="col-2 col-lg-6">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav me-auto mb-2 mb-lg-0">
         {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
             {% if currentpage ==  menuitem.linkedpage %}
-                {% set currentclass = "current" %}
+                {% set currentclass = "active" %}
             {% else %}
                 {% set currentclass = "" %}
             {% endif %}
-        <li class="{{currentclass}}">
-            <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}">{{menuitem.label}}</a>
-        </li>
+        <div class="nav-item">
+            <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}" class="nav-link {{currentclass}}">{{menuitem.label}}</a>
+        </div>
         {% endfor %}
-    </ul>
-</nav>
+    </div>
+</div>
+</div>

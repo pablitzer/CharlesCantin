@@ -1,20 +1,21 @@
 {% if pagedata.isbackgroundfullscreen %}
-    <header class="bg-head-full-{{currentpage}}">
-        <div>
-            {% include "navmenu.njk" %}
-            {% include "sociallinks.njk" %}
-            {% include "logo.njk" %}
-        </div>
-        {% include "title.njk" %}
-    </header>
+    {% set hclass = 'header-full-height' %}
 {% else %}
-    <header class="bg-head-{{currentpage}}">
-        <div>
-            {% include "navmenu.njk" %}
-            {% include "sociallinks.njk" %}
-            {% include "logo.njk" %}
+    {% set hclass = 'header-normal-height' %}
+{% endif%}
+<header class="bg-head-{{currentpage}} {{hclass}} w-100 m-0 p-0">
+    <div class="mx-auto container-hd">
+        
+    <nav class="row navbar navbar-expand-lg navbar-light bg-light h-menu">
+        <div class="align-items-center justify-content-between d-flex">
+        {% include "navmenu.njk" %}
+        {% include "sociallinks.njk" %}
+        {% include "logo.njk" %}
         </div>
-        {% include "title.njk" %}
-    </header>
-{% endif %}
+    </nav>
+    <div class="d-flex h-title align-items-center justify-content-center title-full-heigth">
+    {% include "title.njk" %}
+    </div>
+    </div>
+</header>
 

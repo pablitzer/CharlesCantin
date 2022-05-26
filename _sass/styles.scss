@@ -1,6 +1,37 @@
 @import 'font';
 @import 'customBS';
 
+$menu-height: 200;
+$title-height: 100;
+
+$offset-title: $menu-height * 1.5;
+
+.nav-brand img {
+  height: 150px;
+}
+.social-icon {
+  height: 18px;
+}
+
+.header-full-height {
+  height: 100vh;
+}
+.header-normal-height {
+  height: 300px;
+}
+.h-menu {
+  height: #{$menu-height}px;
+}
+.title-full-heigth {
+  height: calc(100vh - #{$offset-title}px);
+}
+.title-normal-heigth {
+  height: #{$title-height}px;
+}
+h1 {
+  margin: auto;
+}
+
 .wrapper {
   min-width: 300px;
   min-height: 360px;
