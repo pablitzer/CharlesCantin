@@ -1,50 +1,44 @@
 <html lang="fr">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="{{pagedata.refdescription}}">
-      <title>{{pagedata.reftitle}}</title>
-      <link rel="stylesheet" href="stylesheets/styles.css" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    </head>
-    <body>
-      {% block header %}
-        {% include "header.njk" %}
-      {% endblock %}
-      {% block main %}
-      {% endblock %}
-      {% block footer %}
-        {% include "footer.njk" %}
-      {% endblock %}
-      {% block script %}
-      {% endblock %}
-      <script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ pagedata.refdescription }}" />
+    <title>{{ pagedata.reftitle }}</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" media="screen" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  </head>
+  <body>
+    {% block header %} {% include "header.njk" %} {% endblock %} {% block main %} {% endblock %} {% block footer %} {% include "footer.njk" %} {% endblock %} {% block script %} hello {% endblock %}
+
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.js"></script>
+
+    <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
+        window.netlifyIdentity.on('init', (user) => {
           if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
             });
           }
         });
       }
-      </script>
-    </body>
+    </script>
+  </body>
 </html>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
 </html>

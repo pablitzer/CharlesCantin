@@ -17,6 +17,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./javascripts');
   eleventyConfig.addPassthroughCopy('./stylesheets');
   eleventyConfig.addPassthroughCopy('./configuration');
+  eleventyConfig.addPassthroughCopy('node_modules/bootstrap');
+  eleventyConfig.addPassthroughCopy('node_modules/jquery');
 
   eleventyConfig.ignores.add('README.md');
 
