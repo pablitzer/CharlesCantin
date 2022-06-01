@@ -325,9 +325,10 @@ collections:
               - label: 'url du lien social'
                 name: 'url'
                 widget: 'string'
-              - label: 'logo du réseau réseau social (fichier svg)'
-                name: logo
-                widget: 'image'
+              - label: 'nom du réseau social'
+                name: socialnetwork
+                widget: 'select'
+                options: ['facebook', 'instagram', 'linkedin', 'twitter', 'you tube']
       - label: 'informations de contact'
         name: 'contactinfos'
         file: 'configuration/general/contactinfos.json'

@@ -5,14 +5,14 @@
       "label": "facebook",
       "hovertext": "Retrouvez-moi sur Facebook",
       "url": "https://fr-fr.facebook.com/photographe.charles.cantin",
-      "logo": "/images/uploads/facebook.svg"
+      "socialnetwork": "facebook"
     },
     {
       "order": 2,
       "label": "instagram",
       "hovertext": "Retrouvez-moi sur Instagram",
       "url": "https://www.instagram.com/photographe.charles.cantin",
-      "logo": "/images/uploads/instagram.svg"
+      "socialnetwork": "instagram"
     }
   ]
 }

@@ -1,7 +1,7 @@
-<div class="d-flex me-auto mb-2 mb-lg-0 col-hd-2 col-4 col-lg-2 ">
+<div class="navbar-nav me-auto  col-hd-2 col-4 col-lg-2 social-networks justify-content-center">
 {% for link in general.sociallinks.socialnetworks | sort( false, true, 'order') %}
-    <div class="nav-item">
-        <a href="{{link.url}}" title="{{link.hovertext}}" class="nav-link"><img src="{{link.logo}}" alt="{{link.label}}" class="social-icon"></a>
+    <div class="nav-item ms-3">
+        <a href="{{link.url}}" title="{{link.hovertext}}" class="nav-link"><span  alt="{{link.label}}" class="social-icon icon-{{link.socialnetwork}}-logo"></span></a>
     </div>
 {% endfor %}
 </div>

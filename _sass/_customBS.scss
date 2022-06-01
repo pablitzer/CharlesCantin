@@ -14,6 +14,16 @@ $secondary: $col-brand-darker;
 $light: $col-light;
 $dark: $col-dark;
 
+$theme-colors: (
+  primary: $col-brand,
+  secondary: $col-brand-darker,
+  dark: $col-dark,
+  light: $col-light,
+  brand-lighter: $col-brand-lighter,
+  dark-lighter: $col-dark-lighter,
+  dark-lightest: $col-dark-lightest,
+);
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,

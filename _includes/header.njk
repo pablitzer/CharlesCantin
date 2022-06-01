@@ -4,18 +4,18 @@
     {% set hclass = 'header-normal-height' %}
 {% endif%}
 <header class="bg-head-{{currentpage}} {{hclass}} w-100 m-0 p-0">
+    <div class="fader"></div>
     <div class="mx-auto container-hd">
-        
-    <nav class="row navbar navbar-expand-lg navbar-light bg-light h-menu">
-        <div class="align-items-center justify-content-between d-flex">
-        {% include "navmenu.njk" %}
-        {% include "sociallinks.njk" %}
-        {% include "logo.njk" %}
+        <nav class="row navbar navbar-dark navbar-expand-lg h-menu p-0 " id="navbar-content">
+            <div class="align-items-center justify-content-between d-flex">
+            {% include "navmenu.njk" %}
+            {% include "sociallinks.njk" %}
+            {% include "logo.njk" %}
+            </div>
+        </nav>
+        <div class="d-flex h-title align-items-center justify-content-center title-full-heigth">
+        {% include "title.njk" %}
         </div>
-    </nav>
-    <div class="d-flex h-title align-items-center justify-content-center title-full-heigth">
-    {% include "title.njk" %}
-    </div>
     </div>
 </header>
 

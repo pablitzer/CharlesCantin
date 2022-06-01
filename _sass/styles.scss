@@ -1,3 +1,4 @@
+@import 'icons';
 @import 'font';
 @import 'customBS';
 
@@ -15,9 +16,24 @@ $offset-title: $menu-height * 1.5;
 
 .header-full-height {
   height: 100vh;
+  position: relative;
+
+  .fader {
+    height: 200px;
+    width: 100%;
+    background-color: rgba($col-dark, 0.25);
+    top: 0px;
+    left: 0px;
+    position: absolute;
+  }
 }
 .header-normal-height {
   height: 300px;
+  .fader {
+    height: 300px;
+    width: 100%;
+    background-color: rgba($col-dark, 0.35);
+  }
 }
 .h-menu {
   height: #{$menu-height}px;
@@ -30,9 +46,97 @@ $offset-title: $menu-height * 1.5;
 }
 h1 {
   margin: auto;
+  font-size: 36px;
+
+  .subtitle {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    font-weight: 100;
+    margin-top: 1em;
+    margin-left: 0.3em;
+    text-align: center;
+  }
+}
+header {
+  color: $col-light;
+}
+
+.navbar-nav > div {
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 18px;
+  color: $col-light;
+  &.active {
+    &::after {
+      border-bottom: 2px solid $col-light;
+      bottom: -2px;
+      content: ' ';
+      left: 0;
+      position: absolute;
+      right: 0;
+      margin-right: $spacer * 0.25;
+      margin-left: $spacer * 0.25;
+    }
+  }
+}
+
+.social-networks {
+  &.navbar-nav {
+    flex-direction: row;
+  }
+}
+.social-icon {
+  font-size: 18px;
 }
 
 @import 'menu';
+
+.bg-head-accueil {
+  background-image: url('/images/uploads/background-accueil.jpg');
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.55);
+  border: 0px;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 0px;
+  border-radius: 0.25rem;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
+  transition: none;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+.collapse.show {
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+.menu-wrapper {
+  position: relative;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+}
+/*
 
 .wrapper {
   min-width: 300px;
@@ -127,3 +231,4 @@ button.action {
     transform: scale(1.1, 1.1);
   }
 }
+*/
