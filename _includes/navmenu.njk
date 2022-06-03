@@ -1,21 +1,22 @@
-<div class="col-2 col-lg-6 container-fluid menu-wrapper">
-    <button class="navbar-toggler hamburger-button" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"
-        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon-menu"><span></span><span></span><span></span></div>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-        <div class="navbar-nav me-auto mb-2 mb-lg-0">
-            {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
-                {% if currentpage ==  menuitem.linkedpage %}
-                    {% set currentclass = "active" %}
-                {% else %}
-                    {% set currentclass = "" %}
-                {% endif %}
-            <div class="nav-item  me-lg-4">
-                <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}" class="nav-link {{currentclass}}">{{menuitem.label}}</a>
-            </div>
-            {% endfor %}
+<div class="col-2 col-lg-5">
+<input class="main-menu" type="checkbox" id="main-menu"/>
+<label class="hamb" for="main-menu"><span class="hamb-line"></span></label>
+
+<!-- Menu -->
+<div class="nav ">
+    <div class="menu d-flex">
+        {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
+            {% if currentpage ==  menuitem.linkedpage %}
+                {% set currentclass = "active" %}
+            {% else %}
+                {% set currentclass = "" %}
+            {% endif %}
+        <div class="menu-item">
+            <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}" class="nav-link {{currentclass}}">{{menuitem.label}}</a>
         </div>
+    {% endfor %}
     </div>
 </div>
+</div>
+
 
