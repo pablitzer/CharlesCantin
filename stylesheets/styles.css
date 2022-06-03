@@ -13053,7 +13053,6 @@ header {
 /* Toggle menu icon */
 .main-menu:checked ~ .hamb {
   z-index: 100;
-  position: absolute;
 }
 
 .main-menu:checked ~ .hamb .hamb-line {
