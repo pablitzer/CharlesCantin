@@ -4,7 +4,19 @@
       "order": 1,
       "label": "Prestations & Tarifs",
       "hovertext": "Consultez mes offres de prestation",
-      "linkedpage": "accueil"
+      "linkedpage": "prestations"
+    },
+    {
+      "order": 2,
+      "label": "Galeries photo",
+      "hovertext": "Découvrez mes galeries photo",
+      "linkedpage": "galeries"
+    },
+    {
+      "order": 3,
+      "label": "Contact & devis",
+      "hovertext": "Contactez-moi pour plus d'informations",
+      "linkedpage": "contact"
     }
   ]
 }

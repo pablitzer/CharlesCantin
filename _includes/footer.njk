@@ -1,25 +1,35 @@
 {% set infos = general.contactinfos %}
-<footer>
-    <div>
-        <h2>{{infos.contactname}}</h2>
-        <div>{{infos.address1}}<div>
-        {% if infos.address2 %}<div>{{infos.address2}}<div>{% endif%}
-        {% if infos.phonenumber %}<div>{{infos.phonenumber}}<div>{% endif%}
-        {% if infos.mobilephonenumber %}<div>{{infos.mobilephonenumber}}<div>{% endif%}
-        <div>{{infos.email}}<div>
-    </div>
-    <div>
-    </div>
+<footer class="container-fluid">
+  <div class="mx-auto container-hd flex-column">
+    <div class="row container-fluid col-12">
+      <div class="col-12 col-lg-6">
+        <h2>{{ infos.contactname }}</h2>
+        <div class="footer-info">
+          <div>{{ infos.address1 }}</div>
+          {% if infos.address2 %}
+          <div>{{ infos.address2 }}</div>
+          {% endif%} {% if infos.phonenumber %}
+          <div>{{ infos.phonenumber }}</div>
+          {% endif%} {% if infos.mobilephonenumber %}
+          <div>{{ infos.mobilephonenumber }}</div>
+          {% endif%}
+          <div>{{ infos.email }}</div>
+        </div>
+      </div>
 
-    <div>
-        <h2>{{general.otherlabels.moreinfotitle}}</h2>
-        <ul>
-        {% for menuitem in general.footermenu.menuitems | sort( false, true, 'order') %}
-            <li>
-                <a href="{{pages[menuitem.linkedpage].url}}" title="{{menuitem.hovertext}}">{{menuitem.label}}</a>
-            </li>
-        {% endfor %}
-        </ul>
-        {% include "sociallinks.njk" %}
+      <div class="col-12 col-lg-6">
+        <h2>{{ general.otherlabels.moreinfotitle }}</h2>
+        <div class="footer-info">
+          {% for menuitem in general.footermenu.menuitems | sort( false, true, 'order') %}
+          <div>
+            <a href="{{ pages[menuitem.linkedpage].url }}" title="{{ menuitem.hovertext }}">{{ menuitem.label }}</a>
+          </div>
+          {% endfor %} {% include "sociallinks.njk" %}
+        </div>
+      </div>
     </div>
-<footer>
+    <div class="row container-fluid col-12">
+      <div class="copyright">{{ general.copyright.text }}</div>
+    </div>
+  </div>
+</footer>

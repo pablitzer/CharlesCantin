@@ -1,7 +1,7 @@
-<div class="menu d-flex col-5 col-lg-5 social-networks justify-content-center">
+<div class="menu d-flex col-6 col-lg-5 social-networks">
 {% for link in general.sociallinks.socialnetworks | sort( false, true, 'order') %}
     <div class="menu-item">
-        <a href="{{link.url}}" title="{{link.hovertext}}" class="nav-link"><span  alt="{{link.label}}" class="social-icon icon-{{link.socialnetwork}}-logo"></span></a>
+        <a href="{{link.url}}" target="_blank" title="{{link.hovertext}}" class="nav-link"><span  alt="{{link.label}}" class="social-icon icon-{{link.socialnetwork}}-logo"></span></a>
     </div>
 {% endfor %}
 </div>

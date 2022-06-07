@@ -1,9 +1,9 @@
-<div class="col-2 col-lg-5">
-<input class="main-menu" type="checkbox" id="main-menu"/>
-<label class="hamb" for="main-menu"><span class="hamb-line"></span></label>
+<div class="col-2 col-lg-5 d-flex">
+<input class="menu-toggle" type="checkbox" id="menu-toggle"/>
+<label class="hamb" for="menu-toggle"><span class="hamb-line"></span></label>
 
 <!-- Menu -->
-<div class="nav ">
+<div class="menu-wrapper">
     <div class="menu d-flex">
         {% for menuitem in general.navbar.menuitems | sort( false, true, 'order') %}
             {% if currentpage ==  menuitem.linkedpage %}
