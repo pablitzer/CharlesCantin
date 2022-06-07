@@ -1,0 +1,15 @@
+{% set section = sections.about %}
+<section class="container-fluid about">
+  <div class="mx-auto container-hd d-flex flex-wrap">
+    <div class="section-column container-fluid col-12 col-md-6 order-1 order-md-1">
+      <h2 class="text-center">{{ section.title }}</h2>
+      <div>
+        {{ section.text | md | safe }}
+      </div>
+    </div>
+
+    <div class="section-column col-12 col-md-6 order-0 order-md-0">
+      <div class="image"><img src="{{ section.image }}" alt="{{ section.imagecaption }}" class="shadow" /></div>
+    </div>
+  </div>
+</section>
