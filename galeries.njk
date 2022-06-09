@@ -1,0 +1,20 @@
+---
+permalink: /galeries/
+---
+{% set currentpage = 'galeries' %}
+{% set pagedata = pages[currentpage] %}
+{% extends "layouts/base.njk" %}
+
+{% block main %}
+<main>
+    {% include "gallery.njk" %}
+</main>
+{% endblock %}
+{% block scriptafter %}
+    <script type="text/javascript" src="/javascripts/gallery.js"></script>
+{% endblock %}
+
+
+
+      
+

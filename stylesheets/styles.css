@@ -12869,8 +12869,7 @@ fieldset:disabled .btn {
 }
 
 .header-normal-height {
-  height: 180px;
-  position: relative;
+  height: calc(180px + 100);
 }
 
 .h-menu {
@@ -12907,6 +12906,11 @@ h2, .h2 {
 
 header {
   color: #ffffff;
+}
+
+header .title-normal-heigth {
+  color: #2b2d2f;
+  font-weight: bold;
 }
 
 .menu-wrapper {
@@ -13247,4 +13251,134 @@ footer .footer-column {
           transform: scale(1.1);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.gallery .category-box {
+  border: 1px solid #2b2d2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 9px 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.gallery .chosen-category {
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+}
+
+.gallery .dropdown .label {
+  color: #939699;
+}
+
+.gallery .dropdown-item {
+  color: #939699;
+}
+
+.gallery .dropdown-item.current {
+  color: #2b2d2f;
+}
+
+.gallery .dropdown-item:hover {
+  background-color: #e9ecef;
+  color: #5f6973;
+}
+
+.gallery .category-list {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.gallery .category-list .cat-item {
+  color: #939699;
+}
+
+.gallery .category-list .cat-item.current {
+  color: #2b2d2f;
+}
+
+.gallery .category-list .cat-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #5f6973;
+}
+
+.gallery .filter-category {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/*
+ * Bootstrap gallery v2.0
+ * https://github.com/ludovicscribe/bootstrap-gallery
+ * https://ludovicscribe.fr/blog/galerie-images-bootstrap
+ *
+ * Copyright 2016, Scribe Ludovic
+ * https://ludovicscribe.fr/
+ */
+#bootstrap-gallery .modal-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#bootstrap-gallery .modal-content {
+  border-radius: 0px;
+  border: none;
+}
+
+#bootstrap-gallery .modal-header {
+  padding: 5px 10px;
+  display: block;
+}
+
+#bootstrap-gallery .modal-body {
+  padding: 0;
+}
+
+#bootstrap-gallery .modal-body img {
+  width: 100%;
+}
+
+#bootstrap-gallery .modal-body .carousel-control {
+  background-image: none;
+}
+
+#bootstrap-gallery .modal-header a.modal-button {
+  float: right;
+  font-size: 18px;
+  line-height: 1;
+  color: #cccccc;
+  margin-left: 5px;
+}
+
+#bootstrap-gallery .modal-header a.modal-button:hover {
+  text-decoration: none;
+  color: #808080;
+}
+
+#bootstrap-gallery .carousel-control-prev i,
+#bootstrap-gallery .carousel-control-next i {
+  font-size: 2em;
+}
+
+.img-thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  height: 150px;
+  width: 100%;
 }

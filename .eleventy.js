@@ -20,28 +20,26 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./configuration');
   eleventyConfig.addPassthroughCopy('node_modules/bootstrap');
   eleventyConfig.addPassthroughCopy('node_modules/jquery');
+  eleventyConfig.addPassthroughCopy('node_modules/@popperjs');
 
   eleventyConfig.ignores.add('README.md');
 
   // add prestations data as a collection
   eleventyConfig.addCollection('prestations', function (collectionApi) {
-    console.log(collectionApi.items[0].data);
-
     return Object.entries(collectionApi.items[0].data['prestations']).map((e) => e[1]);
   });
 
   // add global photo list data as a collection
   eleventyConfig.addCollection('photos', function (collectionApi) {
-    console.log(collectionApi.items[0].data);
-
     return Object.entries(collectionApi.items[0].data['photos']).map((e) => Object.assign({ filename: e[1].image.replace(/^.*[\\\/]/, '') }, e[1]));
   });
 
   // add category photo list data as a collection
   eleventyConfig.addCollection('photocategories', function (collectionApi) {
-    console.log(collectionApi.items[0].data);
-
     return Object.entries(collectionApi.items[0].data['photocategories']).map((e) => e[1]);
+  });
+  eleventyConfig.addCollection('pages', function (collectionApi) {
+    return Object.entries(collectionApi.items[0].data['pages']).map((e) => e[1]);
   });
 
   // Return your Object options:

@@ -1,8 +1,26 @@
-<ul>
+<div class="category-list d-none d-lg-flex col-12">
 {% for category in collections.photocategories | sort( false, true, 'order') | selectattr("isvisible") %}
-    <li data-code="{{category.code}}">{{category.label}}</li>
+    <div data-code="{{category.code}}" class="cat-item filter-category p-2" data-filter="{{category.code}}">{{category.label}}</div>
 {% endfor %}
 {% if addAllCategory %}
-    <li data-code="all">{{general.otherlabels.allcategories}}</li>
+    <div data-code="all" class="cat-item p-2 filter-category current"  data-filter="all">{{general.otherlabels.allcategories}}</div>
 {% endif %}
-</ul>
+</div>
+
+<div class="d-flex d-lg-none w-100">
+  <div class="dropdown category-box d-flex w-100">
+    <div class="col-4 label "> catégorie:</div>
+    <div role="button" class="dropdown-toggle col-8" data-bs-toggle="dropdown">
+      <span class="chosen-category">Toutes</span>
+    </div>
+    <div class="dropdown-menu dropdown-menu-end">
+        {% for category in collections.photocategories | sort( false, true, 'order') | selectattr("isvisible") %}
+        <div data-code="{{category.code}}" class="dropdown-item filter-category" data-filter="{{category.code}}">{{category.label}}</div>
+        {% endfor %}
+        {% if addAllCategory %}
+            <div data-code="all" class="dropdown-item filter-category current" data-filter="all">{{general.otherlabels.allcategories}}</div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+

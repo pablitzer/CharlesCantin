@@ -1,0 +1,13 @@
+---
+permalink: /stylesheets/background.css
+---
+{% for page in collections.pages %}
+.bg-head-{{page.name}} {
+  background-image: url("{{page.backgroundimage}}");
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
+}
+{% endfor %}
+      
+

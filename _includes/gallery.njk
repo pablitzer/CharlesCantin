@@ -1,7 +1,56 @@
-<div>
-    {% for photo in collections.photos %}
-        {% if currentcategory == 'all' or currentcategory == photo.category%}
-    <img src="/images/thumbnails/{{photo.filename}}" alt="{{photo.name}}">
-        {% endif %}
-    {% endfor %}
-</div>
+{% set addAllCategory = true%}
+<section class="container-fluid gallery">
+    <div class="mx-auto container-hd d-flex">
+    {% include "photocategorieslist.njk" %}
+        <div>
+            {% for photo in photos %}
+                {% if currentcategory == 'all' or currentcategory == photo.category%}
+            <img src="/images/thumbnails/{{photo.filename}}" alt="{{photo.name}}">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="mx-auto container-hd d-flex flex-wrap">   
+
+            {% for photo in collections.photos%}
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2" item-cat="{{photo.category}}">
+                <a href="{{photo.image}}" class="thumbnail">
+                    <img src="/images/thumbnails/{{photo.filename}}" alt="{{photo.name}}" />
+                </a>
+            </div>
+            {% endfor %}
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2" item-cat="portrait">
+                <a href="/images/uploads/portrait_1.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_1.jpg" alt="Image 1" />
+                </a>
+            </div>
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2"  item-cat="portrait">
+                <a href="/images/uploads/portrait_6.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_6.jpg" alt="Image 1" />
+                </a>
+            </div>
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 "  item-cat="portrait">
+                <a href="/images/uploads/portrait_2.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_2.jpg" alt="Image 1" />
+                </a>
+            </div>
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 " item-cat="portrait">
+                <a href="/images/uploads/portrait_3.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_3.jpg" alt="Image 1" />
+                </a>
+            </div>
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2" item-cat="portrait">
+                <a href="/images/uploads/portrait_4.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_4.jpg" alt="Image 1" />
+                </a>
+            </div>
+            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2" item-cat="portrait">
+                <a href="/images/uploads/portrait_5.jpg" class="thumbnail">
+                    <img src="/images/thumbnails/portrait_5.jpg" alt="Image 1" />
+                </a>
+            </div>
+           
+           
+        
+    </div>
+</section>
