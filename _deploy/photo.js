@@ -27,19 +27,17 @@ const isImage = (file) => {
   return re.test(file);
 };
 
-async function generatePhoto(filePath) {
+async function generatePhoto(filePath, fileName) {
   try {
     const photoName = fileName.replace(/\.([a-z]+)$/, '');
-    const photoFilePath = `generatedphotos/${photoName}.json`;
+    const photoFilePath = `generatedphotos/${photoName.replace('_', '-')}.json`;
     fs.appendFileSync(
       photoFilePath,
-      JSON.stringify(
-        new {
-          name: photoName.replace('_', ' ').toLowerCase(),
-          image: filePath,
-          category: photoName.split('_')[0].toLowerCase(),
-        }()
-      )
+      JSON.stringify({
+        name: photoName.replace('_', ' ').toLowerCase(),
+        image: '/' + filePath,
+        category: photoName.split('_')[0].toLowerCase(),
+      })
     );
   } catch (error) {
     return console.log(error);
@@ -54,7 +52,7 @@ async function createPhotos() {
 
     if (isImage(fileName)) {
       console.log(`[photo] process ${fileName}`);
-      generatePhoto(filePath);
+      generatePhoto(filePath, fileName);
     }
   });
 }
