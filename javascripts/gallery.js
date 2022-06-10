@@ -1,3 +1,4 @@
+/*
 var gallerySelector = '';
 
 bootstrapGallery = function (selector) {
@@ -151,14 +152,36 @@ function GetGalleryHTML() {
     '</div>'
   );
 }
+*/
 
 // Init
+/*
 jQuery(function () {
   bootstrapGallery('a.thumbnail, a.show-gallery');
-  $('a.thumbnail img').addClass('img-thumbnail');
+  
 });
+*/
 
 jQuery(function () {
+  function getCarousel(currentElement) {
+    const content = $('<div></div>');
+    const currentIndex = $(currentElement).parent().attr('item-index');
+    $('.gallery-item')
+      .filter(':visible')
+      .each(function (index, element) {
+        const source = $(element);
+        const sourceLink = source.children('a');
+        const sourceImg = sourceLink.children('img');
+
+        const img = $('<img></img>').addClass('d-block w-100').attr('src', sourceLink.attr('href')).attr('alt', sourceImg.attr('alt'));
+        content.append(
+          $('<div></div>')
+            .addClass('carousel-item' + (source.attr('item-index') === currentIndex ? ' active' : ''))
+            .append(img)
+        );
+      });
+    return content.html();
+  }
   function filtercategory(code, label) {
     $('.category-box .chosen-category').text(label.charAt(0).toUpperCase() + label.slice(1));
     $('.filter-category').removeClass('current');
@@ -171,6 +194,14 @@ jQuery(function () {
       $('.gallery-item[item-cat="' + code + '"]').show('3000');
     }
   }
+  $('a.thumbnail img').addClass('img-thumbnail');
+
+  $('.thumbnail').on('click', function (event) {
+    $('.carousel-inner').html(getCarousel(this));
+    $('#carousel-gallery').carousel();
+    $('#ModalCarousel').modal('show');
+    return event.preventDefault();
+  });
 
   const defCode = 'all';
   const defLabel = $('.filter-category[data-filter="' + defCode + '"]')
