@@ -163,23 +163,52 @@ jQuery(function () {
 */
 
 jQuery(function () {
+  $.fn.nextWrap = function () {
+    var $next = this.next();
+    if ($next.length) return $next;
+    return this.siblings().first();
+  };
+
+  $.fn.prevWrap = function () {
+    var $prev = this.prev();
+    if ($prev.length) return $prev;
+    return this.siblings().last();
+  };
+  function setSrcFromLazzy(current) {
+    const image = current.children('img');
+    const src = image.attr('src-lazzy');
+    if (src) {
+      image.attr('src', src);
+      image.removeAttr('src-lazzy');
+    }
+  }
+  function setNextSrcfromLazzy(current, direction) {
+    // direction is sliding direction not arrow direction
+    const next = direction === 'right' ? current.prevWrap() : current.nextWrap();
+    setSrcFromLazzy(next);
+  }
   function getCarousel(currentElement) {
     const content = $('<div></div>');
     const currentIndex = $(currentElement).parent().attr('item-index');
-    $('.gallery-item')
-      .filter(':visible')
-      .each(function (index, element) {
-        const source = $(element);
-        const sourceLink = source.children('a');
-        const sourceImg = sourceLink.children('img');
+    const items = $('.gallery-item').filter(':visible');
 
-        const img = $('<img></img>').addClass('d-block w-100').attr('src', sourceLink.attr('href')).attr('alt', sourceImg.attr('alt'));
-        content.append(
-          $('<div></div>')
-            .addClass('carousel-item' + (source.attr('item-index') === currentIndex ? ' active' : ''))
-            .append(img)
-        );
-      });
+    items.each(function (index, element) {
+      const source = $(element);
+      const sourceLink = source.children('a');
+      const sourceImg = sourceLink.children('img');
+
+      const img = $('<img></img>').addClass('d-block w-100').attr('src', '').attr('src-lazzy', sourceLink.attr('href')).attr('alt', sourceImg.attr('alt'));
+      content.append(
+        $('<div></div>')
+          .addClass('carousel-item' + (source.attr('item-index') === currentIndex ? ' active' : ''))
+          .append(img)
+      );
+    });
+    const current = content.find('.active');
+    setSrcFromLazzy(current);
+    setNextSrcfromLazzy(current, 'left');
+    setNextSrcfromLazzy(current, 'right');
+
     return content.html();
   }
   function filtercategory(code, label) {
@@ -201,6 +230,16 @@ jQuery(function () {
     $('#carousel-gallery').carousel();
     $('#ModalCarousel').modal('show');
     return event.preventDefault();
+  });
+
+  $('#carousel-gallery').on('slide.bs.carousel', function (event) {
+    // do something...
+    // event.direction "left" "right"
+    // related target
+    // from
+    // to
+    const cible = $(event.relatedTarget);
+    setNextSrcfromLazzy(cible, event.direction);
   });
 
   const defCode = 'all';

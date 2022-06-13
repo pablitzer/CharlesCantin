@@ -10,10 +10,10 @@
             {% endfor %}
         </div>
     </div>
-    <div class="mx-auto container-hd d-flex flex-wrap">   
+    <div class="mx-auto container-hd d-flex flex-wrap justify-content-around">   
             {% set index = 1 %}
             {% for photo in collections.photos%}
-            <div class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2" item-cat="{{photo.category}}" item-index="{{index}}">
+            <div class="gallery-item" item-cat="{{photo.category}}" item-index="{{index}}">
                 <a href="{{photo.image}}" class="thumbnail">
                     <img src="/images/thumbnails/{{photo.filename}}" alt="{{photo.name}}" />
                 </a>
