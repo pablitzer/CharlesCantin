@@ -50,12 +50,21 @@
   margin-bottom: 40px;
   min-height: calc(100vh - #{$menu-height}px - #{$title-height}px);
 
-  .gallery-item {
-    margin: 4px;
-    margin-bottom: 6px;
-    width: 133px;
+  .gallery-wrapper {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(3, 1fr);
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include media-breakpoint-up(md) {
-      width: 200px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include media-breakpoint-up(hd) {
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 
@@ -84,9 +93,13 @@
     display: flex;
     align-items: center;
   }
+  .gallery-item {
+    display: none;
+  }
 
   .modal-content {
     background-color: transparent;
+    border: none;
   }
 
   .carousel-inner {
@@ -99,7 +112,23 @@
 
   .carousel .carousel-item img {
     width: 100%;
-    max-height: 90vh;
+    max-height: 200px;
+    @include media-breakpoint-up(sm) {
+      max-height: 300px;
+    }
+    @include media-breakpoint-up(md) {
+      max-height: 400px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-height: 600px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-height: 800px;
+    }
+    @include media-breakpoint-up(xxl) {
+      max-height: 900px;
+    }
+
     object-fit: contain;
     height: auto;
   }

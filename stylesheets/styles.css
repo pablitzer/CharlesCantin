@@ -13264,6 +13264,7 @@ footer .footer-column {
   padding: 9px 20px;
   font-size: 18px;
   margin-bottom: 20px;
+  min-width: 300px;
 }
 
 .gallery .chosen-category {
@@ -13373,15 +13374,39 @@ footer .footer-column {
   min-height: calc(100vh - 180px - 100px);
 }
 
-.gallery .gallery-item {
-  margin: 4px;
-  margin-bottom: 6px;
-  width: 133px;
+.gallery .gallery-wrapper {
+  display: -ms-grid;
+  display: grid;
+  gap: 6px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 576px) {
+  .gallery .gallery-wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
-  .gallery .gallery-item {
-    width: 200px;
+  .gallery .gallery-wrapper {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery .gallery-wrapper {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  .gallery .gallery-wrapper {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -13426,8 +13451,13 @@ footer .footer-column {
           align-items: center;
 }
 
+.gallery .gallery-item {
+  display: none;
+}
+
 .gallery .modal-content {
   background-color: transparent;
+  border: none;
 }
 
 .gallery .carousel-inner {
@@ -13441,10 +13471,40 @@ footer .footer-column {
 
 .gallery .carousel .carousel-item img {
   width: 100%;
-  max-height: 90vh;
+  max-height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
   height: auto;
+}
+
+@media (min-width: 576px) {
+  .gallery .carousel .carousel-item img {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery .carousel .carousel-item img {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery .carousel .carousel-item img {
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery .carousel .carousel-item img {
+    max-height: 800px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gallery .carousel .carousel-item img {
+    max-height: 900px;
+  }
 }
 
 .gallery .control-icon {

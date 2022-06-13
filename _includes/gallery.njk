@@ -10,7 +10,8 @@
             {% endfor %}
         </div>
     </div>
-    <div class="mx-auto container-hd d-flex flex-wrap justify-content-around">   
+    <div class="mx-auto container-hd d-flex justify-content-center">   
+    <div class= "gallery-wrapper grid">
             {% set index = 1 %}
             {% for photo in collections.photos%}
             <div class="gallery-item" item-cat="{{photo.category}}" item-index="{{index}}">
@@ -21,6 +22,7 @@
                 {% set index = index + 1 %}
             {% endfor %}
         
+    </div>
     </div>
 
     <div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
