@@ -97,6 +97,12 @@ jQuery(function () {
     return event.preventDefault();
   });
 
+  // add event on close icon to close carousel
+  $('.close').on('click', function (event) {
+    $('#ModalCarousel').modal('hide');
+    return event.preventDefault();
+  });
+
   // lazy load images when carousel slide
   $('#carousel-gallery').on('slide.bs.carousel', function (event) {
     const cible = $(event.relatedTarget);

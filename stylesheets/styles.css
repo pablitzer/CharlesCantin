@@ -6639,7 +6639,7 @@ fieldset:disabled .btn {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .modal-header {
@@ -13439,8 +13439,8 @@ footer .footer-column {
 }
 
 .gallery .modal-dialog {
-  width: 80%;
-  max-width: 80%;
+  width: 100%;
+  max-width: 100%;
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -13449,6 +13449,15 @@ footer .footer-column {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.gallery #carousel-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery .gallery-item {
@@ -13461,12 +13470,32 @@ footer .footer-column {
 }
 
 .gallery .carousel-inner {
-  overflow: visible;
+  position: initial;
+  width: 80%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery .carousel-control-prev,
+.gallery .carousel-control-next {
+  width: 10%;
 }
 
 .gallery .carousel {
+  position: initial;
   overflow: hidden;
   background-color: transparent;
+}
+
+.gallery .carousel-fade .carousel-item {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .gallery .carousel .carousel-item img {
@@ -13512,4 +13541,62 @@ footer .footer-column {
   background-color: rgba(43, 45, 47, 0.5);
   padding: 5px;
   display: inline-block;
+}
+
+/*Close Icon */
+.close {
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  top: 40px;
+  padding: 10px 10px;
+  pointer-events: auto;
+  width: 10vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  z-index: 2000;
+}
+
+.close .close-line {
+  cursor: pointer;
+  background: transparent;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+
+.close .close-line::before, .close .close-line::after {
+  background: rgba(255, 255, 255, 0.5);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.close .close-line::before {
+  top: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+.close .close-line::after {
+  top: -5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+.close:hover .close-line::before, .close:hover .close-line::after {
+  background: #ffffff;
 }

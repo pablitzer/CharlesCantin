@@ -42,6 +42,8 @@ $container-max-widths: (
   hd: 1600px,
 );
 
+$modal-backdrop-opacity: 0.75;
+
 $font-family-sans-serif: Oxygen, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
