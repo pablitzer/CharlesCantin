@@ -13297,6 +13297,7 @@ footer .footer-column {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .gallery .category-list .cat-item {
