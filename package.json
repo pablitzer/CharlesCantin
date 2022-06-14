@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run:local": "npx @11ty/eleventy --serve --port=8081",
+    "run:local": "npx @11ty/eleventy --serve --port=8082",
+    "run:localproxy": "npx netlify-cms-proxy-server",
     "build:sass": "sass _sass/styles.scss:_site/stylesheets/styles.min.css --style compressed && sass _sass/styles.scss:_site/stylesheets/styles.css --style expanded",
     "build:css": "npm run build:sass && postcss _site/stylesheets/styles.css --use=autoprefixer --output=_site/stylesheets/styles.css && postcss _site/stylesheets/styles.min.css --use=autoprefixer --output=_site/stylesheets/styles.min.css",
     "build:prod": "node _deploy/thumbnails.js&&npm run build:css&&MY_ENVIRONMENT=production npx @11ty/eleventy"

@@ -1,0 +1,24 @@
+<div class="card">
+  <img src="{{ prestation.image }}" alt="{{ prestation.label }}" class="card-img-top" />
+  <div class="card-body card-description">
+    <h2 class="card-title">{{ prestation.label | capitalize }}</h2>
+    <div class="card-text">
+      <p>{{ prestation.description }}</p>
+      {% if prestation.pricenote != ''%}
+      <p class="card-note">* {{ prestation.pricenote }}</p>
+      {% endif%}
+    </div>
+  </div>
+  <div class="card-body card-action align-items-center">
+          <a href="{{ pages[prestation.actionlinkedpage].url  }}" title="{{ prestation.actionhovertext }}">
+            <span class="action-button">{{ prestation.actiontext }}</span>
+          </a>
+  </div>
+  <div class="card-body card-price">
+    {% if prestation.pricenote != '' %} {% set priceclass = 'price-note' %} {%else%} {% set priceclass = 'price-without-note'%}{% endif%}
+    {% if prestation.tailormadeprice%}
+    <span>{{ general.otherlabels.tailormadeprice }}</span>
+    {% else %}
+    <span class="{{priceclass}}">{{ prestation.price }} €{% endif %}</span>
+  </div>
+</div>

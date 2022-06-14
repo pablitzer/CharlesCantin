@@ -1,0 +1,87 @@
+.card {
+  width: 300px;
+  min-width: 300px;
+  max-width: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    &.card-description,
+    &.card-action {
+      background-color: $col-brand;
+      color: $col-light;
+    }
+    &.card-price {
+      background-color: $col-brand-lighter;
+      color: $col-light;
+      height: 70px;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .price-note::after {
+        content: '*';
+        padding-left: 5px;
+        color: rgba($col-light, 0.5);
+      }
+    }
+    &.card-description {
+      height: 200px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .card-text {
+      font-size: 14px;
+      font-weight: 200;
+    }
+    .card-note {
+      color: rgba($col-light, 0.5);
+    }
+  }
+  .card-body.card-action {
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+    display: flex;
+    justify-content: center;
+    height: 100px;
+
+    .action-button {
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid $col-brand-lighter;
+      background-color: $col-brand;
+      font-size: 16px;
+      font-weight: 100;
+      color: $col-light;
+      transition: all 0.3s ease-in-out;
+      width: 250px;
+      text-align: center;
+    }
+    .action-button:hover {
+      box-shadow: 2px 2px 10px rgba($col-brand, 0.5);
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

@@ -1,51 +1,56 @@
-/*
+.gallery {
+  .category-box {
+    border: 1px solid $col-dark;
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-width: 300px;
+  }
+  .chosen-category {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+  }
+  .dropdown .label {
+    color: $col-dark-lightest;
+  }
+  .dropdown-item {
+    color: $col-dark-lightest;
+    &.current {
+      color: $col-dark;
+    }
+    &:hover {
+      background-color: $gray-200;
+      color: $col-dark-lighter;
+    }
+  }
 
-#bootstrap-gallery .modal-dialog {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  .category-list {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    .cat-item {
+      color: $col-dark-lightest;
+      &.current {
+        color: $col-dark;
+      }
+      &:hover {
+        transform: scale(1.1);
+        color: $col-dark-lighter;
+      }
+    }
+  }
+  .filter-category {
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
-#bootstrap-gallery .modal-content {
-  border-radius: 0px;
-  border: none;
-}
-
-#bootstrap-gallery .modal-header {
-  padding: 5px 10px;
-  display: block;
-}
-
-#bootstrap-gallery .modal-body {
-  padding: 0;
-}
-
-#bootstrap-gallery .modal-body img {
-  width: 100%;
-}
-
-#bootstrap-gallery .modal-body .carousel-control {
-  background-image: none;
-}
-
-#bootstrap-gallery .modal-header a.modal-button {
-  float: right;
-  font-size: 18px;
-  line-height: 1;
-  color: #cccccc;
-  margin-left: 5px;
-}
-
-#bootstrap-gallery .modal-header a.modal-button:hover {
-  text-decoration: none;
-  color: #808080;
-}
-
-#bootstrap-gallery .carousel-control-prev i,
-#bootstrap-gallery .carousel-control-next i {
-  font-size: 2em;
-}
-*/
 .gallery {
   margin-bottom: 40px;
   min-height: calc(100vh - #{$menu-height}px - #{$title-height}px);

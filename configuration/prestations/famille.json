@@ -1,0 +1,14 @@
+{
+  "actiontext": "CONTACTEZ-MOI",
+  "tailormadeprice": false,
+  "price": 220,
+  "name": "famille",
+  "order": 3,
+  "actionhovertext": "Contactez-moi en utilisant le formulaire",
+  "label": "famille",
+  "image": "/images/uploads/illustration-famille.jpg",
+  "description": "Pour la famille ou les amis jusqu'à quatre personnes, en extérieur ou en studio",
+  "pricenote": "30 Euros en supplément par personne au delà de 4 (hormis enfant jusqu'à 2 ans)",
+  "actionlinkedpage": "contact",
+  "isvisible": true
+}

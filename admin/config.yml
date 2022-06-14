@@ -6,6 +6,8 @@ backend:
   base_url: cms.netlify.com
   auth_endpoint: auth
 
+local_backend: true
+
 locale: 'fr'
 
 publish_mode: editorial_workflow

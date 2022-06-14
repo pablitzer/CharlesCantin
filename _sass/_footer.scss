@@ -1,0 +1,49 @@
+footer {
+  background-color: $col-brand-darker;
+  color: $col-light;
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: $col-dark-lightest;
+  }
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .footer-info {
+    font-size: 14px;
+    color: $col-dark-lightest;
+  }
+
+  .social-networks {
+    justify-content: flex-start;
+    &.menu {
+      flex-direction: row;
+      .nav-link {
+        padding-left: 0px;
+        padding-right: 14px;
+      }
+    }
+    .social-icon {
+      font-size: 14px;
+      color: $col-dark-lightest;
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: $col-dark-lighter;
+  }
+  a:hover,
+  .social-icon:hover {
+    color: $col-light;
+  }
+  .footer-column {
+    padding: 20px;
+  }
+}

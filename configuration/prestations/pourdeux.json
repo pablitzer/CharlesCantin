@@ -1,0 +1,14 @@
+{
+  "actiontext": "CONTACTEZ-MOI",
+  "tailormadeprice": false,
+  "price": 195,
+  "name": "pourdeux",
+  "order": 2,
+  "actionhovertext": "Contactez-moi en utilisant le formulaire",
+  "label": "pour deux",
+  "image": "/images/uploads/illustration-pourdeux.jpg",
+  "description": "Pour deux personnes, en extérieur ou en studio",
+  "pricenote": "",
+  "actionlinkedpage": "contact",
+  "isvisible": true
+}

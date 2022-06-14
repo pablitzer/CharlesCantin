@@ -1,0 +1,13 @@
+{
+  "actiontext": "DEMANDEZ UN DEVIS",
+  "tailormadeprice": true,
+  "name": "evenement",
+  "order": 4,
+  "actionhovertext": "Contactez-moi pour obtenir un devis",
+  "label": "j'immortalise l'évènement",
+  "image": "/images/uploads/illustration-evenement.jpg",
+  "description": "Prestation de mariage ou de baptême sur devis",
+  "pricenote": "",
+  "actionlinkedpage": "contact",
+  "isvisible": true
+}

@@ -1,0 +1,7 @@
+<section class="container-fluid gallery">
+    <div class="mx-auto container-hd d-flex justify-content-center flex-wrap">
+    {% for prestation in collections.prestations | sort( false, true, 'order') | selectattr("isvisible")%}
+        {% include "service.njk" %} 
+    {% endfor %}
+    </div>
+</section>
