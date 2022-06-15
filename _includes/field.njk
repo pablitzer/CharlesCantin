@@ -8,7 +8,7 @@
 {% endif %}
 {% if field.type == 'texte multi-lignes' %}
 <div class="mb-3">
-  <textarea class="form-control" placeholder="{{field.label}}" id="{{fieldname}}"  id="{{fieldname}}" style="height: 100px" {% if field.isrequired %}required{% endif %}></textarea>
+  <textarea class="form-control" placeholder="{{field.label}}" id="{{fieldname}}"  name="{{fieldname}}" style="height: 100px" {% if field.isrequired %}required{% endif %}></textarea>
   <div class="invalid-feedback">Cette information est obligatoire pour pouvoir traiter votre demande</div>
 </div>
 {% endif %}
@@ -27,7 +27,7 @@
 {% endif %}
 {% if field.type == 'case a cocher' %}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="{{fieldname}}"  id="{{fieldname}}" {% if field.isrequired %}required{% endif %} >
+  <input class="form-check-input" type="checkbox" value="" id="{{fieldname}}"  name="{{fieldname}}" {% if field.isrequired %}required{% endif %} >
   <label class="form-check-label" for="flexCheckChecked">
     {{field.label}}
   </label>
