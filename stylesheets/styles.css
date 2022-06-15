@@ -13663,3 +13663,70 @@ footer .footer-column {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.contact-section .action-button {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #436789;
+  background-color: #2e465d;
+  font-size: 16px;
+  font-weight: 100;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-section .action-button:hover {
+  -webkit-box-shadow: 2px 2px 10px rgba(46, 70, 93, 0.5);
+          box-shadow: 2px 2px 10px rgba(46, 70, 93, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section .contact-text {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.contact-section .contact-form,
+.contact-section .contact-text {
+  width: 90%;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  color: #2b2d2f;
+}
+
+.contact-section input::-webkit-input-placeholder,
+.contact-section textarea::-webkit-input-placeholder {
+  color: rgba(43, 45, 47, 0.2);
+  opacity: 1;
+}
+
+.contact-section input:-ms-input-placeholder,
+.contact-section textarea:-ms-input-placeholder {
+  color: rgba(43, 45, 47, 0.2);
+  opacity: 1;
+}
+
+.contact-section input::-ms-input-placeholder,
+.contact-section textarea::-ms-input-placeholder {
+  color: rgba(43, 45, 47, 0.2);
+  opacity: 1;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: rgba(43, 45, 47, 0.2);
+  opacity: 1;
+}

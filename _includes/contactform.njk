@@ -1,0 +1,19 @@
+{% set section = sections.contactform%}
+<section class="container-fluid gallery contact-section">
+    <div class="mx-auto container-hd justify-content-center align-items-center d-flex flex-column">
+        <div class="contact-text d-flex flex-column justify-content-center">
+        {{ section.text | md | safe }}
+        </div>
+        <div class="contact-form d-flex justify-content-center align-items-center">
+            <form name="contact" class="needs-validation w-100" method="post" data-netlify="true"  novalidate >
+            {% for field in section.fieldconfiguration | sort( false, true, 'order') %}
+                {% include "field.njk" %} 
+            {% endfor %}
+                <div class="d-flex justify-content-center">
+                    <button class="action-button" id="send-message" type="submit" title="{{ section.actionhovertext }}">{{section.actiontext}}</button>
+                </div>
+
+            </form>
+        </div>
+  </div>
+</section>
