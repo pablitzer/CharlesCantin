@@ -7,35 +7,35 @@
   "fieldconfiguration": [
     {
       "isrequired": true,
-      "fieldname": "NOM",
+      "fieldname": "name",
       "label": "Votre nom",
       "type": "texte mono-ligne",
       "order": 1
     },
     {
       "isrequired": true,
-      "fieldname": "EMAIL",
+      "fieldname": "email",
       "label": "Votre Email",
       "type": "email",
       "order": 2
     },
     {
       "isrequired": false,
-      "fieldname": "SUJET",
+      "fieldname": "subject",
       "label": "Sujet",
       "type": "texte mono-ligne",
       "order": 3
     },
     {
       "isrequired": true,
-      "fieldname": "MESSAGE",
+      "fieldname": "comments",
       "label": "Votre message",
       "type": "texte multi-lignes",
       "order": 4
     },
     {
       "isrequired": true,
-      "fieldname": "ACCORDRGPD",
+      "fieldname": "aggreement",
       "label": "J'accepte que les informations saisies soient exploitées dans le cadre de cette demande",
       "type": "case a cocher",
       "order": 5
