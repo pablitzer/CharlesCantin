@@ -1,0 +1,20 @@
+---
+permalink: /contact/
+---
+{% set currentpage = 'contact' %}
+{% set pagedata = pages[currentpage] %}
+{% extends "layouts/base.njk" %}
+
+{% block main %}
+<main>
+    {% include "contactform.njk" %}
+</main>
+{% endblock %}
+{% block scriptafter %}
+    <script type="text/javascript" src="/javascripts/contactform.js"></script>
+{% endblock %}
+
+
+
+      
+

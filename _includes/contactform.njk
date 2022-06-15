@@ -5,7 +5,7 @@
         {{ section.text | md | safe }}
         </div>
         <div class="contact-form d-flex justify-content-center align-items-center">
-            <form name="contact" class="needs-validation w-100" method="post" data-netlify="true"  novalidate >
+            <form name="contact" class="needs-validation w-100" method="post" data-netlify="true"  novalidate action="contact/merci.html">
             {% for field in section.fieldconfiguration | sort( false, true, 'order') %}
                 {% include "field.njk" %} 
             {% endfor %}
