@@ -1,8 +1,8 @@
 {
-  "text": "Laissez-nous un message, nous y répondrons dans les plus brefs délais.\nVous pouvez également nous contacter par téléphone au  06 01 02 03 04.",
+  "text": "Laissez-moi un message, j'y répondrai dans les plus brefs délais.\nVous pouvez également me contacter par téléphone au 06 01 02 03 04.",
   "actiontext": "ENVOYER",
   "actionhovertext": "Envoyer votre message",
-  "successtext": "Merci pour votre message, nous vous répondrons dans les plus brefs délais.",
+  "successtext": "Merci pour votre message, je vous répondrai dans les plus brefs délais.",
   "errortext": "Votre message n'a pas pu être envoyé, veuillez réessayer ou nous contacter par téléphone au +33 01 02 03 04 05",
   "fieldconfiguration": [
     {

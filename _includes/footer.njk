@@ -8,11 +8,11 @@
           {% if infos.address2 %}
           <div>{{ infos.address2 }}</div>
           {% endif%} {% if infos.phonenumber %}
-          <div>{{ infos.phonenumber }}</div>
+          <div><a href="tel:{{ infos.phonenumber }}">{{ infos.phonenumber }}</a></div>
           {% endif%} {% if infos.mobilephonenumber %}
-          <div>{{ infos.mobilephonenumber }}</div>
+          <div><a href="tel:{{ infos.mobilephonenumber }}">{{ infos.mobilephonenumber }}</a></div>
           {% endif%}
-          <div>{{ infos.email }}</div>
+          <div><a href="mailto:{{ infos.email }}">{{ infos.email }}</a></div>
         </div>
       </div>
 
