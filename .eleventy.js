@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('node_modules/bootstrap');
   eleventyConfig.addPassthroughCopy('node_modules/jquery');
   eleventyConfig.addPassthroughCopy('node_modules/@popperjs');
+  eleventyConfig.addPassthroughCopy({ _favicons: '/' });
 
   eleventyConfig.ignores.add('README.md');
 
