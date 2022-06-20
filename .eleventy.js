@@ -41,6 +41,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('pages', function (collectionApi) {
     return Object.entries(collectionApi.items[0].data['pages']).map((e) => e[1]);
   });
+  eleventyConfig.addGlobalData('generated', () => {
+    let now = new Date();
+    return now.toISOString();
+  });
 
   // Return your Object options:
   return {

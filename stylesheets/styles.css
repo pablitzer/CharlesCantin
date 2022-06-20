@@ -13444,8 +13444,8 @@ footer .footer-column {
 }
 
 .gallery .carousel-fade .carousel-item {
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

@@ -15,7 +15,7 @@ publish_mode: editorial_workflow
 media_folder: '/images/uploads' # Media files will be stored in the repo under images/uploads
 public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
-site_url: https://endearing-chebakia-e2b5f2.netlify.app/
+site_url: https://charlescantinpab.netlify.app/
 
 logo_url: /images/uploads/logo_admin.png
 
@@ -372,6 +372,15 @@ collections:
             widget: 'string'
           - label: 'Titre du menu de liens de bas de page'
             name: 'morefinfotitle'
+            widget: 'string'
+      - label: 'informations du suivante'
+        name: 'site'
+        file: 'configuration/general/site.json'
+        extension: 'json'
+        format: 'json'
+        fields:
+          - label: 'url du site ( sans "/" à la fin")'
+            name: 'url'
             widget: 'string'
 
   - name: 'prestations'
