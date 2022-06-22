@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="{{ pagedata.refdescription }}" />
     <title>{{ pagedata.reftitle }}</title>
-    <link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/styles.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/stylesheets/background.css" type="text/css" media="screen" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -17,11 +17,17 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    {% block header %} {% include "header.njk" %} {% endblock %} {% block main %} {% endblock %} {% block footer %} {% include "footer.njk" %} {% endblock %} {% block scriptbefore %}{% endblock %}
+    {% block header %} {% include "header.njk" %} {% endblock %} {% block main %} {% endblock %} 
+    {% if pagedata.isbackgroundfullscreen %}{% include "scroll.njk"%}{% endif %}
+    {% block footer %} {% include "footer.njk" %} {% endblock %} {% block scriptbefore %}{% endblock %}
 
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="/javascripts/app.js"></script>
+    {% if pagedata.isbackgroundfullscreen %}
+    <script type="text/javascript" src="/javascripts/scroll.js"></script>
+    {% endif %}
+    
     {% block scriptafter %}{% endblock %}
 
     <script>

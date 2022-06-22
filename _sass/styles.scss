@@ -89,6 +89,44 @@ header {
   background-position-x: center;
 }
 
+@keyframes anim-arrow {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+.arrow-scroll {
+  position: relative;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+
+  .arrow-icon {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    &.arrow-bounce {
+      animation: anim-arrow 4s infinite;
+    }
+
+    &.arrow-fade {
+      display: none;
+    }
+  }
+}
+
 @import 'footer';
 @import 'about';
 @import 'gallery';

@@ -13118,6 +13118,68 @@ header .title-normal-heigth {
   background-position-x: center;
 }
 
+@-webkit-keyframes anim-arrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes anim-arrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.arrow-scroll {
+  position: relative;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+}
+
+.arrow-scroll .arrow-icon {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+
+.arrow-scroll .arrow-icon.arrow-bounce {
+  -webkit-animation: anim-arrow 4s infinite;
+          animation: anim-arrow 4s infinite;
+}
+
+.arrow-scroll .arrow-icon.arrow-fade {
+  display: none;
+}
+
 footer {
   background-color: #172533;
   color: #ffffff;
