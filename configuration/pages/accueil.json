@@ -1,11 +1,11 @@
 {
-  "name": "accueil",
-  "label": "page d'accueil",
-  "title": "Charles Cantin",
-  "subtitle": "- PHOTOGRAPHE -",
-  "backgroundimage": "/images/uploads/background-accueil.jpg",
-  "isbackgroundfullscreen": true,
-  "refdescription": "Professionnel spécialisé dans les Mariages, Portraits, Studio, Lifestyle etc. Charles Cantin vous propose ses services en Ile-de-France et en France.",
   "reftitle": "Charles Cantin - Photographe Paris France",
-  "url": "/"
+  "refdescription": "Professionnel spécialisé dans les Mariages, Portraits, Studio, Lifestyle etc. Charles Cantin vous propose ses services en Ile-de-France et en France.",
+  "name": "accueil",
+  "backgroundimage": "/images/uploads/cor1-gs.jpg",
+  "url": "/",
+  "isbackgroundfullscreen": true,
+  "label": "page d'accueil",
+  "subtitle": "- PHOTOGRAPHE -",
+  "title": "Charles Cantin"
 }
