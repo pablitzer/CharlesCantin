@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: test
   repo: pablitzer/CharlesCantin
   site_domain: cms.netlify.com
   base_url: cms.netlify.com
