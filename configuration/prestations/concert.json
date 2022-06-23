@@ -1,0 +1,13 @@
+{
+  "actiontext": "ME FAIRE SIGNE",
+  "isvisible": true,
+  "price": 300,
+  "name": "Concert",
+  "order": 10,
+  "actionhovertext": "J'arrive tout de suite",
+  "label": "Soirée concert",
+  "pricenote": "limité à 2 heures, 100 € par heure supplémentaire.",
+  "image": "/images/uploads/cor6-min.jpg",
+  "description": "Photo reportage sur un évènement musical.",
+  "actionlinkedpage": "contact"
+}
