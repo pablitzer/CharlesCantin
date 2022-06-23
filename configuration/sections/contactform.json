@@ -39,6 +39,13 @@
       "label": "J'accepte que les informations saisies soient exploitées dans le cadre de cette demande",
       "type": "case a cocher",
       "order": 5
+    },
+    {
+      "isrequired": false,
+      "fieldname": "telephone",
+      "label": "téléphone",
+      "type": "telephone",
+      "order": 1
     }
   ]
 }
